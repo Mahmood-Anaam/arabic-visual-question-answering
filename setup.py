@@ -1,15 +1,15 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="arabic-visual-question-answering",
+    name="vqa",
     version="0.1.0",
     description="arabic-visual-question-answering",
     author="Mahmood Anaam",
     author_email="eng.mahmood.anaam@gmail.com",
     url="https://github.com/Mahmood-Anaam/arabic-visual-question-answering.git",
     license="MIT",
-    packages=find_packages(where="src"),
-    package_dir={"": "src"},
+    packages=find_packages(where="vqa"),
+    package_dir={"": "vqa"},
     install_requires=[
         "torch>=1.13.1",
         "torchvision>=0.14.1",

@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="ArabicVQA",
+    name="arabic-visual-question-answering",
     version="0.1.0",
     description="arabic-visual-question-answering",
     author="Mahmood Anaam",

@@ -1,6 +1,50 @@
 # arabic-visual-question-answering
 
+
+
+
+
+## Architecture
+
+![vqa_architecture](assets/images/vqa_architecture.png)
+
+
+![vqa_inputs_outputs](assets/images/vqa_inputs_outputs.png)
+
+
+![vqa_formula_prompt](assets/images/vqa_formula_prompt.png)
+
+
+## How to Use aravqa
+
+### Example Usage in Google Colab
+Interactive Jupyter notebooks are provided to demonstrate aravqa capabilities. You can open these notebooks in Google Colab:
+
+- [Arabic VQA Demo](arabic-visual-question-answering/blob/main/notebooks/demo.ipynb) [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Mahmood-Anaam/arabic-visual-question-answering/blob/main/notebooks/demo.ipynb)
+
+- [Arabic VQA Demo](arabic-visual-question-answering/blob/main/notebooks/demo.ipynb) [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Mahmood-Anaam/arabic-visual-question-answering/blob/main/notebooks/demo.ipynb)
+
+
+### Installation
+
 حسناً، إليك بنية ملفات مكتبة `AraVQA`  مع شرح لكيفية استخدامها:
+
+```bash
+
+!pip install git+https://github.com/Mahmood-Anaam/Violet.git
+!pip install git+https://github.com/Mahmood-Anaam/BiT-ImageCaptioning.git
+
+!pip install git+https://github.com/Mahmood-Anaam/arabic-visual-question-answering.git
+
+```
+
+```bash
+!git clone https://github.com/Mahmood-Anaam/arabic-visual-question-answering.git
+%cd arabic-visual-question-answering
+!pip install -e . -q
+```
+
+
 
 
 **بنية الملفات:**
@@ -15,11 +59,6 @@ aravqa/
 │   └── exceptions.py     # تعريف استثناءات مخصصة
 ├── modules/
 │   ├── __init__.py
-│   ├── image_processing/
-│   │   ├── __init__.py
-│   │   ├── base.py         # واجهة لمعالجة الصور (Abstract Base Class)
-│   │   ├── opencv_processor.py
-│   │   └── pillow_processor.py
 │   ├── captioning/
 │   │   ├── __init__.py
 │   │   ├── base.py         # واجهة لتوليد التعليقات (Abstract Base Class)
@@ -28,7 +67,7 @@ aravqa/
 │   ├── question_answering/
 │   │   ├── __init__.py
 │   │   ├── base.py         # واجهة للإجابة على الأسئلة (Abstract Base Class)
-│   │   └── ara_gpt2_answerer.py
+│   │   └── gemini_answerer.py
 │   └── evaluation/
 │       ├── __init__.py
 │       ├── base.py         # واجهة لتقييم الأداء (Abstract Base Class)
@@ -59,6 +98,7 @@ aravqa/
 2. **الاستيراد:**
 
 ```python
+
 from aravqa.core import pipeline, config
 from aravqa.modules.image_processing import OpenCVProcessor #مثال
 from aravqa.modules.captioning import BITCaptioner #مثال

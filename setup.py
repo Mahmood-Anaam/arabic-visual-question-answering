@@ -11,6 +11,8 @@ setup(
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     install_requires=[
+        "git+https://github.com/Mahmood-Anaam/BiT-ImageCaptioning.git",
+        "git+https://github.com/Mahmood-Anaam/Violet.git",
         "torch>=1.13.1",
         "torchvision>=0.14.1",
         "transformers>=4.12.0",

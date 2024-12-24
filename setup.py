@@ -11,7 +11,7 @@ setup(
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     install_requires=[
-        "vinvl_bert@git+https://github.com/Mahmood-Anaam/vinvl_bert.git"
+        "vinvl_bert@git+https://github.com/Mahmood-Anaam/vinvl_bert.git",
         "Violet@git+https://github.com/Mahmood-Anaam/Violet.git",
         "torch>=1.13.1",
         "torchvision>=0.14.1",

@@ -13,7 +13,6 @@ setup(
     install_requires=[
         "vinvl_bert@git+https://github.com/Mahmood-Anaam/vinvl_bert.git",
         "Violet@git+https://github.com/Mahmood-Anaam/Violet.git",
-        "VinVL@git+https://github.com/Mahmood-Anaam/VinVL.git",
         "yacs",
         "torch",
         "torchvision",

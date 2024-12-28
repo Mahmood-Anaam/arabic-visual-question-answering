@@ -8,8 +8,8 @@ setup(
     author_email="eng.mahmood.anaam@gmail.com",
     url="https://github.com/Mahmood-Anaam/arabic-visual-question-answering.git",
     license="MIT",
-    packages=find_packages(where="src"),
-    package_dir={"": "src"},
+    packages=find_packages(where="aravqa"),
+    package_dir={"": "aravqa"},
     install_requires=[
         "vinvl_bert@git+https://github.com/Mahmood-Anaam/vinvl_bert.git",
         "Violet@git+https://github.com/Mahmood-Anaam/Violet.git",

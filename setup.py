@@ -11,7 +11,7 @@ setup(
     packages=find_packages(where="aravqa"),
     package_dir={"": "aravqa"},
     install_requires=[
-        "https://github.com/Mahmood-Anaam/vinvl/raw/main/vinvl-0.1.0-cp310-cp310-linux_x86_64.whl",
+        "vinvl@git+https://github.com/Mahmood-Anaam/vinvl.git",
         "vinvl_bert@git+https://github.com/Mahmood-Anaam/vinvl_bert.git",
         "Violet@git+https://github.com/Mahmood-Anaam/Violet.git",
         "yacs",

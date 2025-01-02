@@ -1,5 +1,3 @@
-vinvl_bert@git+https://github.com/Mahmood-Anaam/vinvl_bert.git
-Violet@git+https://github.com/Mahmood-Anaam/Violet.git
 torch
 torchvision
 transformers

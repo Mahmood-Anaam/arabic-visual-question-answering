@@ -1,4 +1,1 @@
-google-generativeai>=0.8.2
-transformers
-yacs
-
+Violet@git+https://github.com/Mahmood-Anaam/Violet.git

@@ -1,0 +1,11 @@
+vinvl_bert @ git+https://github.com/Mahmood-Anaam/vinvl_bert.git
+Violet @ git+https://github.com/Mahmood-Anaam/Violet.git
+tqdm==4.67.1
+google-generativeai==0.8.2
+huggingface-hub==0.27.0
+torch==2.5.1
+torchvision==0.20.1
+transformers==4.47.1
+evaluate==0.4.3
+datasets==3.2.0
+arabert==1.0.1

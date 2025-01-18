@@ -32,12 +32,15 @@ def prepare_answers(answers: Dict, language: str) -> List[Dict]:
     Returns:
         List[Dict]: A list of structured answer dictionaries.
     """
+   
+    keyname = "multiple_choice_answer" if "multiple_choice_answer" in answers.keys() else "raw"
+    
     return [
         {
             "id": answers["id"][index],
             "answer": answer,
             "confidence": answers["confidence"][index],
-            "raw": answers.get(f"raw_{language}", [])[index]
+             keyname: answers.get(f"{keyname}_{language}", [])[index] if keyname == "raw" else answers[f"{keyname}"].get(f"{language}", "")
         }
         for index, answer in enumerate(answers.get(language, []))
     ]

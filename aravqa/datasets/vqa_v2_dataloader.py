@@ -11,7 +11,7 @@ class VQAv2DataLoader(OKVQADataLoader):
         """
         super().__init__(dataset=dataset,config=config)
 
-     def collate_fn(self, batch):
+    def collate_fn(self, batch):
         """
         Custom collate function for preparing the batch data.
 

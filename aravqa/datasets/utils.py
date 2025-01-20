@@ -33,17 +33,27 @@ def prepare_answers(answers: Dict, language: str) -> List[Dict]:
         List[Dict]: A list of structured answer dictionaries.
     """
    
-    keyname = "multiple_choice_answer" if "multiple_choice_answer" in answers.keys() else "raw"
-    
-    return [
-        {
-            "id": answers["id"][index],
-            "answer": answer,
-            "confidence": answers["confidence"][index],
-             keyname: answers.get(f"{keyname}_{language}", [])[index] if keyname == "raw" else answers[f"{keyname}"].get(f"{language}", "")
-        }
-        for index, answer in enumerate(answers.get(language, []))
-    ]
+   
+    if "raw" in answers.keys():
+        return [
+            {
+                "id": answers["id"][index],
+                "answer": answer,
+                "confidence": answers["confidence"][index],
+                 "raw": answers.get(f"raw_{language}", [])[index] 
+            }
+            for index, answer in enumerate(answers.get(language, []))
+        ]
+    else:
+        return [
+            {
+                "id": answers["id"][index],
+                "answer": answer,
+                "confidence": answers["confidence"][index],
+            }
+            for index, answer in enumerate(answers.get(language, []))
+        ]
+        
 
 
 def prepare_captions(captions: List[Dict]) -> List[Dict]:

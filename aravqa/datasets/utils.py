@@ -89,13 +89,24 @@ def process_dataset_example(example: Dict, language: str) -> Dict:
     question = example["question"].get(language)
     answers = prepare_answers(example.get("answers", {}), language)
     captions = prepare_captions(example.get("captions", []))
-    return {
+
+    if "multiple_choice_answer" in example.keys():
+        return {
+            "question": question,
+            "answers": answers,
+            "captions": captions,
+            "multiple_choice_answer":example["multiple_choice_answer"].get(language,""),
+            "metadata": example.get("metadata"),
+            "image": example.get("image")
+        }
+    else:
+        return {
         "question": question,
         "answers": answers,
         "captions": captions,
         "metadata": example.get("metadata"),
         "image": example.get("image")
-    }
+        }
 
 
 def prepare_dataset(dataset, language: str = "ar"):
